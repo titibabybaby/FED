@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+:root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+  } /*:root选择器用匹配文档的根元素。在HTML中根元素始终是HTML元素。*/
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex; /*弹性布局*/
+    justify-content: center; /*弹性容器属性*/
+    align-items: center; /*弹性布局容器属性*/
+    margin: 0;
+    min-height: 100vh;/*100%，没有内容也会被撑开*/   
+    
+}
+
+.container{
+    background-color:white;
+    width: 300px;
+    border-radius:5px;
+    box-shadow: darkgray 0 3px 8px 0;
+    margin: 0;
+    padding: 10px;
+    color: dimgrey;
+
+}
+.form{
+    padding: 10px;
+}
+h2{
+    text-align: center;
+    color: black;
+}
+.form-control{
+    margin:5px 0px;
+}
+.form-control label{
+    display: block;
+    margin: 5px 0px;
+    width: 100%;
+}
+.form-control input{
+    display: block;
+    margin: 5px 0px;
+    width: 100%;
+    border:rgb(88, 81, 81) 0.5px solid;
+}
+.form-control input:focus{
+    outline: 0; /*当元素获得焦点的时候，焦点框为0,因为本来会有一个焦点框，想改变border颜色就要把这个框=0*/
+    border-color:rgb(88, 88, 214);
+}
+.form-control.success input{
+    border-color:var(--success-color);
+}
+.form-control.error input{
+    border-color: var(--error-color);
+}
+.form-control small{
+    color:var(--error-color);
+    display: block;
+    margin: 5px 0px;
+    width: 100%;
+    visibility: hidden;
+}
+.form-control.error small{
+    visibility: visible;
+}
+.form button{
+    margin: 5px 0;
+    width: 100%;
+}
+
