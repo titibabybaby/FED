@@ -1,0 +1,164 @@
+﻿/*对默认样式清0*/
+*{
+margin:0px;
+padding:0px;
+}
+
+body {
+    font-size: 14px;
+    color:sienna;
+}
+#container{
+    width: 900px;
+    margin: 0 auto; /*上下、左右，auto自动适应浏览器*/
+}
+#header{
+    height: 200px;
+    margin-bottom: 5px;
+    position: relative;
+}
+.iconlist{
+    position: absolute; /*层定位：父元素header定位relative，
+                       子元素定位absolute，则在它上面*/
+    float: right;
+    top: 170px;
+    right: 10px;
+
+
+}
+.iconlist img{
+    width: 20px;
+    height: 20px;
+}
+#nav{
+    height: 50px;
+    line-height: 50px;/*这个和height设置为一样的，文字垂直居中*/
+    margin: 5px 0px;
+    background-color: steelblue;
+    font: 20px/50px Georgia ; /*字号/行高 字体，都必须写，不然不生效，要垂直居中行号要等与height*/
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+}
+#nav a{
+    text-decoration: none;
+}
+
+/*active必须位于:hover之后！！放在上面才能激活*/
+a:visited{
+    color:white;
+}
+a:link{
+    color:white;
+}
+a:hover{
+    color: saddlebrown;
+}
+a:active{
+    color: saddlebrown;
+}
+#main{
+    background-color: black;
+ 
+}
+#aside{
+    float:left;
+    width: 300px;
+    height: 1000px;
+    background-color:burlywood;
+    font-size: 14px;
+    text-align: center;
+}
+.subaside{
+    width:250px;
+    margin: 0 auto;
+    padding: 5px;
+    clear: both;
+}
+.subaside table{
+    border-collapse: collapse;
+    width: 100%;
+    
+    
+}
+.subaside table,tr,th,td{
+    border: 1px solid black;
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    margin-top: 5px;
+    
+}
+.subaside imglist{
+    width: 150px;
+    margin: 0 auto;/*水平居中*/
+    
+}
+.pol{
+    width: 100px; 
+    margin: 0 auto;/*这里，使方块块pol水平居中*/
+    padding: 5px;
+    background-color:darksalmon;
+    border:1px solid black;
+    border-radius: 5px;
+    box-shadow:2px 2px 2px;
+}
+#imglist img{
+    width: 85px;
+    height: 85px;
+    margin:0 auto;/*水平居中*/
+}
+.rotate-left{
+    transform: rotate(-7deg); 
+    -ms-transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+}
+.rotate-right{
+    transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+}
+#content{
+    float: right;
+    width:595px;
+    background-color: lemonchiffon;
+    margin-bottom: 5px;
+}
+.subcon{
+    width: 500px;
+    margin:10px auto;
+    padding: 5px;
+    clear: both;
+}
+.subcon img{
+    width:220px;
+    height:300px;
+    margin: 2px;
+    padding: 5px;
+    float: left;
+    border:sienna 2px solid;
+}
+.subcon .subtext{
+    float: left;
+    margin: 5px;
+    width: 50%;
+    
+}
+.subcon h2{
+    margin:5px;
+}
+.subcon p{
+    font: 16px/3em ; /*16个像素大小。3倍行高*/
+    margin:5px;
+}
+#footer{
+    height: 60px;
+    line-height: 60px; /*高度和行高一致，则垂直居中*/
+    background-color: lightsalmon;
+    clear: both; /*为了避免footer移上去，设置两个方向清楚浮动*/
+}
+#l-fix{
+    position: fixed;
+    top:200px;
+    left:50px;
+}
